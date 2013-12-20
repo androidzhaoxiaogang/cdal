@@ -1,161 +1,154 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/child_bg"
-              android:orientation="vertical"
-              >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/child_bg"
+    android:orientation="vertical" >
 
     <LinearLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:layout_marginLeft="40dp"
-                  android:layout_marginRight="40dp"
-                  android:background="#FFFFFF"
-                  android:orientation="vertical"
-            >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
 
         <RelativeLayout
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-            <ImageView
-                    android:id="@+id/img_airapd"
-                    android:src="@drawable/airpad_first"
-                    android:scaleType="fitXY"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content" />
-            <ImageView
-                    android:id="@+id/img_arrow"
-                    android:layout_toRightOf="@id/img_airapd"
-                    android:src="@drawable/double_grey_arrow"
-                    android:scaleType="fitXY"
-                    android:layout_marginLeft="5dp"
-                    android:layout_height="25dp"
-                    android:layout_width="25dp" />
-            <TextView
-                    android:id="@+id/tv_first_title"
-                    android:layout_toRightOf="@id/img_arrow"
-                    android:text="航空动态"
-                    android:layout_marginLeft="5dp"
-                    android:layout_height="30dp"
-                    android:layout_width="wrap_content"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    android:textColor="#333333"
-                    android:textStyle="bold"/>
-
-            <ImageView
-                    android:id="@+id/img_arrow_single"
-                    android:src="@drawable/single_grey_arrow"
-                    android:scaleType="fitXY"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@id/tv_first_title"
-                    android:layout_height="20dp"
-                    android:layout_width="20dp" />
-
-            <TextView
-                    android:id="@+id/tv_second_title"
-                    android:layout_toRightOf="@id/img_arrow_single"
-                    android:text="基础架构说明"
-                    android:layout_marginLeft="5dp"
-                    android:layout_height="30dp"
-                    android:layout_width="wrap_content"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    android:textColor="#333333"
-                    android:textStyle="bold"/>
-
-            <ImageView
-                    android:id="@+id/img_back"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/btn_back_black"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="30dp"
-                    android:layout_width="90dp"/>
-        </RelativeLayout>
-
-    <LinearLayout
-            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="40dp"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_marginBottom="10dp"
-            android:layout_height="0dp">
-        <LinearLayout
-                android:id="@+id/ll_left"
-                android:orientation="vertical"
-                android:background="#FFFFFF"
-                android:layout_width="0dp"
-                android:layout_marginRight="5dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-            <TextView
-                    android:text="基础架构说明"
-                    android:textColor="#333333"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"/>
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/img_airapd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/airpad_first" />
+
+            <ImageView
+                android:id="@+id/img_arrow"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/img_airapd"
+                android:scaleType="fitXY"
+                android:src="@drawable/double_grey_arrow" />
 
             <TextView
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/air_function"
-                    android:layout_margin="5dp"
-                    android:layout_width="match_parent"
-                    android:ellipsize="end"/>
+                android:id="@+id/tv_first_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/img_arrow"
+                android:gravity="center"
+                android:text="航空动态"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_arrow_single"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_first_title"
+                android:scaleType="fitXY"
+                android:src="@drawable/single_grey_arrow" />
+
+            <TextView
+                android:id="@+id/tv_second_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/img_arrow_single"
+                android:gravity="center"
+                android:text="基础架构说明"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_back_black" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
 
             <LinearLayout
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent">
-                <TextView
-                        android:text="@string/air_diff"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:layout_width="0dp"
-                        android:ellipsize="end"  />
+                android:id="@+id/ll_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:orientation="vertical" >
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="基础架构说明"
+                    android:textColor="#333333"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:text="@string/air_function"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
             </LinearLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
+            <LinearLayout
                 android:id="@+id/ll_right"
                 android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_marginLeft="5dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
-            <ImageView
-                    android:src="@drawable/kola"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_width="match_parent"
-                    android:scaleType="fitXY"/>
-            <TextView
-                    android:text="@string/air_diff"
-                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/plane_img" />
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:ellipsize="end"  />
-
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:text="@string/air_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
 
-    </LinearLayout>
-    </LinearLayout>
 </LinearLayout>
