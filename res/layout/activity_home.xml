@@ -6,15 +6,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
+    <include layout="@layout/header" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginRight="50dp"
-        android:layout_weight="8" >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        android:layout_weight="6" >
     </LinearLayout>
 
     <LinearLayout
@@ -24,13 +22,45 @@
         android:layout_weight="29"
         android:orientation="horizontal" >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="20dp"
             android:layout_weight="48"
-            android:background="@drawable/project_card_color" >
-        </LinearLayout>
+            android:background="#dd000000" >
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="14dp"
+                android:text="航空动态"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/deliver"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/title_text"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deliver"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12dp"
+                android:ellipsize="end"
+                android:text="@string/air_function"
+                android:textColor="#F3F3F3"
+                android:textSize="16sp" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -39,7 +69,7 @@
             android:layout_weight="28"
             android:orientation="vertical" >
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="13"
@@ -48,23 +78,63 @@
                 <ImageView
                     android:id="@+id/home_2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/wine" />
 
-            <LinearLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/home_2"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/ic_play"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="丰谷特曲10年特辑"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="13"
-                android:background="@drawable/project_card_color" >
+                android:background="#13429e" >
 
                 <ImageView
                     android:id="@+id/home_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="30dp"
+                    android:src="@drawable/ic_fashion" />
 
-            <LinearLayout
+                <TextView
+                    android:id="@+id/fashion_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/home_3"
+                    android:text="风潮精品"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/fashion_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/fashion_text"
+                    android:layout_marginTop="6dp"
+                    android:text="德国红点奖2013年\n度最佳设计作品精选"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="20dp"
@@ -74,8 +144,46 @@
                 <ImageView
                     android:id="@+id/home_4"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/travel" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#1890ff" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_travel" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view1"
+                    android:layout_centerHorizontal="true"
+                    android:text="数码时空"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/home_4"
+                    android:layout_alignLeft="@+id/textView1"
+                    android:text="因纽特人的生存指南\n年轻的冰川"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -98,38 +206,54 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/google_glass" />
 
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#641355" />
+
                 <ImageView
                     android:id="@+id/ic_cate_digital"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="26dp"
                     android:layout_marginLeft="10dp"
                     android:src="@drawable/ic_cate_digital" />
 
                 <LinearLayout
+                    android:id="@+id/linearLayout1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@id/ic_cate_digital"
                     android:orientation="vertical" >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="数码时空"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="硅谷海盗--微软与苹果的博弈穿戴时代来临"
-                        android:textColor="@android:color/white"
-                        android:textSize="14sp" />
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view1"
+                    android:layout_alignLeft="@+id/linearLayout1"
+                    android:layout_marginLeft="21dp"
+                    android:text="数码时空"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/home_5"
+                    android:layout_alignLeft="@+id/textView1"
+                    android:layout_marginBottom="10dp"
+                    android:text="硅谷海盗--微软与苹果的博弈\n穿戴时代来临"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
             </RelativeLayout>
 
             <LinearLayout
@@ -143,7 +267,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/project_card_color" >
+                    android:background="#fd0166" >
 
                     <ImageView
                         android:id="@+id/ic_cate_search"
@@ -155,19 +279,41 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/ic_cate_search"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="6dp"
                         android:text="航班查询"
                         android:textColor="@android:color/white"
                         android:textSize="14sp" />
                 </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="2.5"
-                    android:background="@drawable/project_card_color" >
-                </LinearLayout>
+                    android:background="@drawable/project_card_color"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/house" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imageView1"
+                        android:layout_centerHorizontal="true"
+                        android:drawableLeft="@drawable/ic_play"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:text="星湖别墅宣传片"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -177,28 +323,79 @@
                 android:layout_weight="12"
                 android:orientation="horizontal" >
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/project_card_color" >
-                </LinearLayout>
+                    android:background="#fe8a00" >
 
-                <LinearLayout
+                    <ImageView
+                        android:id="@+id/ic_cate_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_cate_audio" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="6dp"
+                        android:text="音乐欣赏"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:background="@drawable/project_card_color" >
-                </LinearLayout>
+                    android:background="#01a101" >
 
-                <LinearLayout
+                    <ImageView
+                        android:id="@+id/ic_cate_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_cate_game" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="6dp"
+                        android:text="休闲游戏"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:background="@drawable/project_card_color" >
-                </LinearLayout>
+                    android:background="#fd2500" >
+
+                    <ImageView
+                        android:id="@+id/ic_cate_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_cate_finance" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="6dp"
+                        android:text="财经回顾"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

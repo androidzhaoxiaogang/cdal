@@ -40,7 +40,7 @@
         android:layout_alignLeft="@+id/view1"
         android:layout_alignRight="@+id/view1"
         android:layout_alignTop="@+id/view1"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal" >
 
         <ImageView
@@ -71,5 +71,39 @@
             android:layout_weight="1"
             android:src="@drawable/ic_xcar" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view1"
+        android:layout_alignLeft="@+id/view1"
+        android:text="Air"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="PAD"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="合作伙伴"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
 </RelativeLayout>
