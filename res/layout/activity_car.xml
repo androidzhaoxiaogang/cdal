@@ -10,15 +10,51 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
+        android:background="@android:color/black"
         android:orientation="vertical" >
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/shan_img" />
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="80dp"
+                    android:layout_marginTop="80dp"
+                    android:text="永远的车神"
+                    android:textColor="#ffffff"
+                    android:textSize="70sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/air_senna"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/senna_img" />
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -51,9 +87,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/img_arrow"
                 android:gravity="center"
-                android:text="文艺与光影"
+                android:text="汽车频道"
                 android:textColor="#ffffff"
-                android:textSize="18sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -72,9 +108,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/img_arrow_single"
                 android:gravity="center"
-                android:text="F/64 GROUP与他们的黑白世界"
+                android:text="永远的车神"
                 android:textColor="#ffffff"
-                android:textSize="18sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <ImageView
